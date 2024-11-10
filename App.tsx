@@ -21,10 +21,8 @@ import {
 
 import {
   Colors,
-  DebugInstructions,
   Header,
   LearnMoreLinks,
-  ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
 type SectionProps = PropsWithChildren<{
@@ -35,24 +33,8 @@ function Section({children, title}: SectionProps): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
   return (
     <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
+      <Text style={styles.sectionTitle}>{title}</Text>
+      <Text style={styles.sectionDescription}>{children}</Text>
     </View>
   );
 }
@@ -65,31 +47,24 @@ function App(): React.JSX.Element {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
+    <SafeAreaView style={[backgroundStyle, styles.container]}>
+      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+      <ScrollView contentInsetAdjustmentBehavior="automatic">
         <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
+        <View style={styles.contentContainer}>
           <Section title="Nama">
-          Dhimar Fadhilansyah
+            Dhimar Fadhilansyah
           </Section>
           <Section title="NIM">
-          22/493570/SV/20710
+            22/493570/SV/20710
           </Section>
           <Section title="Kelas">
-          A
+            A
           </Section>
-          <Section title="Tautan Sosial Media">
+          <Text style={styles.socialMediaTitle}>Tautan Sosial Media</Text>
+          <Text style={styles.socialMediaDescription}>
             Berikut adalah beberapa tautan sosial media saya:
-          </Section>
+          </Text>
           <LearnMoreLinks />
         </View>
       </ScrollView>
@@ -98,21 +73,42 @@ function App(): React.JSX.Element {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingHorizontal: 20, // Menambahkan padding di sisi kanan dan kiri layar
+    backgroundColor: '#1A1A1A', // Warna latar yang lebih gelap untuk keseluruhan app
+  },
+  contentContainer: {
+    backgroundColor: '#2E2E2E', // Card background warna abu-abu gelap
+    borderRadius: 12,
+    padding: 16,
+    marginVertical: 10, // Jarak antar card
+  },
   sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+    marginVertical: 8,
   },
   sectionTitle: {
-    fontSize: 24,
+    fontSize: 18,
     fontWeight: '600',
+    color: '#FFFFFF', // Warna teks judul yang lebih kontras
   },
   sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
+    fontSize: 16,
+    color: '#C7C7CC', // Warna teks deskripsi abu-abu terang
+    marginTop: 4,
   },
-  highlight: {
+  socialMediaTitle: {
+    fontSize: 20,
     fontWeight: '700',
+    color: '#FFFFFF',
+    marginTop: 20,
+    textAlign: 'center',
+  },
+  socialMediaDescription: {
+    fontSize: 14,
+    color: '#C7C7CC',
+    textAlign: 'center',
+    marginVertical: 8,
   },
 });
 

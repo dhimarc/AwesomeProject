@@ -5,70 +5,73 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faUserGraduate } from '@fortawesome/free-solid-svg-icons';
 
 const Mahasiswa = () => {
- return (
-   <FlatList
-     data={Datamahasiswa}
-     renderItem={({ item }) => (
-       <TouchableOpacity
-         onPress={() =>
-           Linking.openURL('google.navigation:q=' + item.latitude + ',' + item.longitude)} >
-         <View style={styles.card}> 
-           <View style={styles.avatar}>
-             <FontAwesomeIcon icon={faUserGraduate} size={50} color={item.gender =='male' ? 'blue' : 'yellow'} />
-           </View>
-           <View>
-             <Text>{item.first_name} {item.last_name}</Text>
-             <Text>{item.gender}</Text>
-             <Text>Kelas {item.class}</Text>
-             <Text>{item.latitude}, {item.longitude}</Text>
-           </View>
-         </View>
-       </TouchableOpacity>
-     )}
-   />
+  return (
+    <View style={styles.container}>
+      <FlatList
+        data={Datamahasiswa}
+        renderItem={({ item }) => (
+          <TouchableOpacity
+            onPress={() =>
+              Linking.openURL('google.navigation:q=' + item.latitude + ',' + item.longitude)} >
+            <View style={styles.card}> 
+              <View style={styles.avatar}>
+              <FontAwesomeIcon 
+                icon={faUserGraduate} 
+                size={50} 
+                color={item.gender === 'male' ? '#007BFF' : '#FF69B4'} // Biru untuk pria dan pink untuk wanita
+              />
 
- )
+              </View>
+              <View style={styles.textContainer}>
+                <Text style={styles.nameText}>{item.first_name} {item.last_name}</Text>
+                <Text style={styles.detailText}>Jenis Kelamin: {item.gender === 'male' ? 'Pria' : 'Wanita'}</Text>
+                <Text style={styles.detailText}>Kelas: {item.class}</Text>
+                <Text style={styles.detailText}>Lokasi: {item.latitude}, {item.longitude}</Text>
+              </View>
+            </View>
+          </TouchableOpacity>
+        )}
+      />
+    </View>
+  )
 }
 
 export default Mahasiswa
 
 const styles = StyleSheet.create({
-    card: {
-      flexDirection: 'row',
-      alignItems: 'center', // Menjaga komponen tetap sejajar vertikal di tengah
-      padding: 15,
-      borderRadius: 10,
-      backgroundColor: 'white',
-      shadowColor: '#000',
-      shadowOffset: { width: 1, height: 1 },
-      shadowOpacity: 0.2,
-      shadowRadius: 2,
-      elevation: 3,
-      marginHorizontal: 20,
-      marginVertical: 10,
-    },
-    avatar: {
-      borderRadius: 40, // Membuat lingkaran sesuai ukuran width
-      width: 80,
-      height: 80,
-      marginBottom: 5,
-      marginRight: 5, // Memberikan jarak antara avatar dan teks di sebelah kanan
-    },
-    textContainer: {
-      flex: 1,
-      justifyContent: 'center', // Mengatur teks agar berada di tengah secara vertikal
-    },
-    nameText: {
-      fontSize: 12,
-      fontWeight: 'bold',
-      marginBottom: 4,
-    },
-    detailText: {
-      fontSize: 12,
-      color: 'grey',
-      marginBottom: 2,
-    },
-  });
-  
-  
-   
+  container: {
+    flex: 1,
+    backgroundColor: '#1A1A1A', // Background utama dengan warna #1A1A1A
+  },
+  card: {
+    flexDirection: 'row',
+    alignItems: 'center', 
+    padding: 15,
+    borderRadius: 10,
+    backgroundColor: 'rgba(46, 46, 46, 0.9)', // Latar belakang card dengan opacity agar lebih transparan
+    marginHorizontal: 20,
+    marginVertical: 10,
+  },
+  avatar: {
+    borderRadius: 40,
+    width: 80,
+    height: 80,
+    marginBottom: 5,
+    marginRight: 15, // Menambahkan jarak lebih agar tidak terlalu rapat dengan teks
+  },
+  textContainer: {
+    flex: 1,
+    justifyContent: 'center',
+  },
+  nameText: {
+    fontSize: 16,
+    fontWeight: '700',
+    color: '#FFFFFF', // Warna teks nama putih
+    marginBottom: 8, // Memberikan jarak antar teks
+  },
+  detailText: {
+    fontSize: 14,
+    color: '#C7C7CC', // Warna teks lainnya abu-abu terang
+    marginBottom: 4, // Memberikan jarak antar detail
+  },
+});

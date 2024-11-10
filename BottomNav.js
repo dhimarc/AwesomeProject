@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Profil from './App';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faUser, faGear} from '@fortawesome/free-solid-svg-icons';
+import { faUser, faGear } from '@fortawesome/free-solid-svg-icons';
 import { WebView } from 'react-native-webview';
 import { faUserGraduate } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -13,15 +13,16 @@ import Mahasiswa from './Mahasiswa';
 
 function HomeScreen() {
   return (
-    <Profil/>
+    <Profil />
   );
 }
 
 function SettingsScreen() {
   return (
-   <Mahasiswa/>
+    <Mahasiswa />
   );
 }
+
 function WebScreen() {
   return (
     <WebView
@@ -36,12 +37,25 @@ const Tab = createBottomTabNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator
+        screenOptions={{
+          tabBarActiveTintColor: '#FFFFFF', // Warna ikon dan teks tab aktif (putih)
+          tabBarInactiveTintColor: '#C7C7CC', // Warna ikon dan teks tab tidak aktif (abu-abu terang)
+          tabBarStyle: {
+            backgroundColor: '#2E2E2E', // Latar belakang Bottom Tab menjadi #2E2E2E
+            borderTopWidth: 0, // Menghilangkan garis batas atas tab
+          },
+        }}
+      >
         <Tab.Screen
           name="Profil"
           component={HomeScreen}
           options={{
-            headerShown: false,
+            headerShown: true,
+            headerStyle: {
+              backgroundColor: '#2E2E2E', // Latar belakang header atas yang sama dengan Bottom Tab
+            },
+            headerTintColor: '#FFFFFF', // Warna teks header
             tabBarIcon: ({ color }) => (
               <FontAwesomeIcon icon={faUser} color={color} size={20} />
             ),
@@ -51,6 +65,10 @@ export default function App() {
           name="Data Mahasiswa"
           component={SettingsScreen}
           options={{
+            headerStyle: {
+              backgroundColor: '#2E2E2E', // Latar belakang header atas yang sama dengan Bottom Tab
+            },
+            headerTintColor: '#FFFFFF', // Warna teks header
             tabBarIcon: ({ color }) => (
               <FontAwesomeIcon icon={faUserGraduate} color={color} size={20} />
             ),
@@ -60,6 +78,10 @@ export default function App() {
           name="Github"
           component={WebScreen}
           options={{
+            headerStyle: {
+              backgroundColor: '#2E2E2E', // Latar belakang header atas yang sama dengan Bottom Tab
+            },
+            headerTintColor: '#FFFFFF', // Warna teks header
             tabBarIcon: ({ color }) => (
               <FontAwesomeIcon icon={faGithub} color={color} size={20} />
             ),
