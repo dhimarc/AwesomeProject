@@ -4,11 +4,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Profil from './App';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faUser, faGear } from '@fortawesome/free-solid-svg-icons';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { WebView } from 'react-native-webview';
 import { faUserGraduate } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-
 import Mahasiswa from './Mahasiswa';
 
 function HomeScreen() {
@@ -44,6 +43,13 @@ export default function App() {
           tabBarStyle: {
             backgroundColor: '#2E2E2E', // Latar belakang Bottom Tab menjadi #2E2E2E
             borderTopWidth: 0, // Menghilangkan garis batas atas tab
+            paddingBottom: 5, // Menambahkan padding bawah agar tab tidak terlalu rapat
+            // Menambahkan bayangan manual dengan opacity yang memudar ke atas
+            shadowColor: '#000', // Warna bayangan hitam
+            shadowOffset: { width: 0, height: -3 }, // Bayangan lebih kecil ke atas
+            shadowOpacity: 0.2, // Opasitas bayangan rendah untuk efek halus
+            shadowRadius: 6, // Radius bayangan agar menyebar dengan halus
+            elevation: 10, // Bayangan lebih jelas di Android
           },
         }}
       >

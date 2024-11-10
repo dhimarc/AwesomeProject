@@ -2,7 +2,7 @@ import React from 'react'
 import Datamahasiswa from './data/Mahasiswa.json'
 import { FlatList, StyleSheet, Text, View, TouchableOpacity, Linking } from 'react-native'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faUserGraduate } from '@fortawesome/free-solid-svg-icons';
+import { faUserGraduate, faMale, faFemale } from '@fortawesome/free-solid-svg-icons';
 
 const Mahasiswa = () => {
   return (
@@ -16,10 +16,11 @@ const Mahasiswa = () => {
             <View style={styles.card}> 
               <View style={styles.avatar}>
               <FontAwesomeIcon 
-                icon={faUserGraduate} 
-                size={50} 
-                color={item.gender === 'male' ? '#007BFF' : '#FF69B4'} // Biru untuk pria dan pink untuk wanita
-              />
+  icon={faUserGraduate} 
+  size={50} 
+  color={item.gender === 'male' ? '#A6C8FF' : '#F8BBD0'} // Abu-abu terang untuk pria dan abu-abu gelap untuk wanita
+/>
+
 
               </View>
               <View style={styles.textContainer}>
