@@ -6,10 +6,11 @@ import Profil from './App';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { WebView } from 'react-native-webview';
-import { faUserGraduate } from '@fortawesome/free-solid-svg-icons';
+import { faUserGraduate, faPlusCircle, faUserPen } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import Mahasiswa from './List_data';
 import CreateData from './CreateData';
+import EditData from './EditData';
 
 function HomeScreen() {
   return (
@@ -23,13 +24,15 @@ function SettingsScreen() {
   );
 }
 
-function WebScreen() {
+function EditScreen() {
   return (
-    <WebView
-      source={{ uri: 'https://github.com/dhimarc' }}
-      style={{ flex: 1 }} // Optional: Makes WebView take up the full screen
-    />
+    <EditData />
   );
+  //   <WebView
+  //     source={{ uri: 'https://github.com/dhimarc' }}
+  //     style={{ flex: 1 }} // Optional: Makes WebView take up the full screen
+  //   />
+  // );
 }
 
 const Tab = createBottomTabNavigator();
@@ -64,7 +67,7 @@ export default function App() {
             },
             headerTintColor: '#FFFFFF', // Warna teks header
             tabBarIcon: ({ color }) => (
-              <FontAwesomeIcon icon={faUser} color={color} size={20} />
+              <FontAwesomeIcon icon={faPlusCircle} color={color} size={20} />
             ),
           }}
         />
@@ -82,15 +85,15 @@ export default function App() {
           }}
         />
         <Tab.Screen
-          name="Github"
-          component={WebScreen}
+          name="Edit Data"
+          component={EditScreen}
           options={{
             headerStyle: {
               backgroundColor: '#2E2E2E', // Latar belakang header atas yang sama dengan Bottom Tab
             },
             headerTintColor: '#FFFFFF', // Warna teks header
             tabBarIcon: ({ color }) => (
-              <FontAwesomeIcon icon={faGithub} color={color} size={20} />
+              <FontAwesomeIcon icon={faUserPen} color={color} size={20} />
             ),
           }}
         />

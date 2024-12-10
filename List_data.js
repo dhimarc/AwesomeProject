@@ -48,7 +48,7 @@ const Listdata = () => {
 
   const updateData = () => {
     const data = { first_name, last_name, kelas, gender, email };
-     fetch(`${jsonUrl}/${editIdid}`, {
+     fetch(`${jsonUrl}/${editId}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
