@@ -125,7 +125,7 @@ const Mapview = () => {
 
     // Layer WMS per tahun
     var wmsLayers = {
-      "2013": L.tileLayer.wms('http://192.168.141.122:8080/geoserver/wms', {
+      "2013": L.tileLayer.wms('http://192.168.87.122:8080/geoserver/wms', {
         layers: 'pgwl:NDFI_clip_2013_COG2',
         format: 'image/png',
         transparent: true,
@@ -136,7 +136,7 @@ const Mapview = () => {
         zIndex: 10,
         crs: L.CRS.EPSG4326 
       }),
-      "2016": L.tileLayer.wms('http://192.168.141.122:8080/geoserver/wms', {
+      "2016": L.tileLayer.wms('http://192.168.87.122:8080/geoserver/wms', {
         layers: 'pgwl:NDFI_2016_2',
         format: 'image/png',
         transparent: true,
@@ -147,7 +147,7 @@ const Mapview = () => {
         zIndex: 10,
         crs: L.CRS.EPSG4326
       }),
-      "2019": L.tileLayer.wms('http://192.168.141.122:8080/geoserver/wms', {
+      "2019": L.tileLayer.wms('http://192.168.87.122:8080/geoserver/wms', {
         layers: 'pgwl:NDFI_2019',
         format: 'image/png',
         transparent: true,
@@ -158,7 +158,7 @@ const Mapview = () => {
         zIndex: 10,
         crs: L.CRS.EPSG4326
       }),
-      "2022": L.tileLayer.wms('http://192.168.141.122:8080/geoserver/wms', {
+      "2022": L.tileLayer.wms('http://192.168.87.122:8080/geoserver/wms', {
         layers: 'pgwl:NDFI_2022',
         format: 'image/png',
         transparent: true,
@@ -169,7 +169,7 @@ const Mapview = () => {
         zIndex: 10,
         crs: L.CRS.EPSG4326
       }),
-      "2024": L.tileLayer.wms('http://192.168.141.122:8080/geoserver/wms', {
+      "2024": L.tileLayer.wms('http://192.168.87.122:8080/geoserver/wms', {
         layers: 'pgwl:NDFI_2024',
         format: 'image/png',
         transparent: true,

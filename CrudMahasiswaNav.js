@@ -2,7 +2,7 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faUserGraduate, faPlusCircle, faUserPen, faMap, faUserAstronaut, faReceipt } from '@fortawesome/free-solid-svg-icons'; // Tambah icon peta
+import { faUserGraduate, faPlusCircle, faHome, faUserPen, faMap, faUserAstronaut, faReceipt } from '@fortawesome/free-solid-svg-icons'; // Tambah icon peta
 // import Profil from './App';
 import Mahasiswa from './List_data';
 import CreateData from './CreateData';
@@ -11,7 +11,11 @@ import Mapview from './Mapview';
 import AddReport from './AddReport'; 
 import ListReports from './ListReport';
 import App2 from './App2';
+import home from './home';
 
+function Rumah() {
+  return <home />;
+}
 
 function Profile() {
   return <App2 />;
@@ -55,7 +59,23 @@ export default function App() {
         }}
       >
 
-      
+
+
+<Tab.Screen
+          name="Home"
+          component={home}
+          options={{
+            headerShown: false,
+            headerStyle: {
+              backgroundColor: '#2E2E2E', // Latar belakang header atas yang sama dengan Bottom Tab
+            },
+            headerTintColor: '#FFFFFF', // Warna teks header
+            tabBarIcon: ({ color }) => (
+              <FontAwesomeIcon icon={faHome} color={color} size={20} />
+            ),
+          }}
+        />
+
         <Tab.Screen
           name="Tambah Data"
           component={HomeScreen}

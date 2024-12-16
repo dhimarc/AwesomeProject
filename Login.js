@@ -8,6 +8,7 @@ import {
   Button,
   StyleSheet,
   Alert,
+  Image,
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
@@ -29,8 +30,13 @@ const LoginPage = () => {
 
   return (
     <SafeAreaView style={styles.container}>
+      {/* Image placed outside the card */}
+      <Image
+        source={require('./assets/tecto2.png')}  // Replace with your image path
+        style={styles.logo}
+      />
       <View style={styles.card}>
-        <Text style={styles.title}>TECTOSENSE </Text>
+        <Text style={styles.title}>TECTOSENSE</Text>
         <ScrollView contentContainerStyle={styles.form}>
           <TextInput
             style={styles.input}
@@ -73,12 +79,18 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#1A1A1A',
   },
+  logo: {
+    width: 120,  // Adjust the logo size
+    height: 120,
+    resizeMode: 'contain', // Keep aspect ratio of the image
+    marginBottom: 20, // Add some space below the image
+  },
   card: {
     width: '90%',
     backgroundColor: 'rgba(46, 46, 46, 0.9)',
     padding: 20,
     borderRadius: 10,
-    elevation: 5,
+    // Removed shadow properties
   },
   title: {
     fontSize: 20,
@@ -94,7 +106,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: 'rgba(204, 204, 204, 0.2)',
     borderRadius: 8,
-    color:'#C7C7CC',
+    color: '#C7C7CC',
     padding: 10,
     marginVertical: 8,
     backgroundColor: 'rgba(46, 46, 46, 0.9)',

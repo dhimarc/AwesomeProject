@@ -1,79 +1,73 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# TectoSense: Tectona Grandis Environmental Monitoring and Reporting System
 
-# Getting Started
+## Deskripsi Produk
+TectoSense adalah sebuah aplikasi monitoring lingkungan yang dirancang untuk melakukan analisis deforestasi di Kabupaten Blora. Aplikasi ini memungkinkan pengguna untuk melaporkan berbagai faktor penyebab deforestasi, seperti:
+- Kebakaran hutan
+- Penebangan liar
+- Pohon roboh
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+Selain itu, aplikasi ini menampilkan titik-titik laporan di peta, memberikan visualisasi yang informatif untuk memahami pola dan penyebab deforestasi.
 
-## Step 1: Start the Metro Server
+## Komponen Pembangun Produk
+TectoSense dibangun menggunakan teknologi modern berikut:
+- **React Native**: Untuk pengembangan aplikasi mobile.
+- **Leaflet.js**: Untuk menampilkan peta interaktif.
+- **Thunder Client**: Untuk pengujian API.
+- **GitHub Pages**: Menyediakan platform hosting untuk menampilkan shapefile terkait.
+- **GeoServer**: Untuk menyimpan dan mengelola data spasial.
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## Sumber Data
+Aplikasi ini menggunakan data dari citra satelit Landsat 8 untuk tahun berikut:
+- 2013
+- 2016
+- 2019
+- 2022
+- 2024
 
-To start Metro, run the following command from the _root_ of your React Native project:
+Citra ini digunakan untuk menganalisis perubahan tutupan lahan dan mendeteksi aktivitas deforestasi secara berkala.
 
-```bash
-# using npm
-npm start
+## Fitur Utama
+1. **Analisis Deforestasi**:
+   - Deteksi perubahan tutupan lahan berdasarkan NDFI.
+2. **Pelaporan Deforestasi**:
+   - Menyediakan platform untuk melaporkan kebakaran hutan, penebangan liar, atau pohon roboh.
+3. **Visualisasi Peta**:
+   - Menampilkan titik-titik laporan di peta interaktif menggunakan Leaflet.js.
 
-# OR using Yarn
-yarn start
-```
+## Tangkapan Layar Komponen Penting Produk
+Berikut adalah beberapa tangkapan layar dari aplikasi TectoSense:
 
-## Step 2: Start your Application
+### 1. Halaman Utama
+![Halaman Utama](./assets/homepage.png)
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+### 2. Peta dengan Titik Laporan
+![Peta Titik Laporan](./assets/plot.png)
 
-### For Android
+### 3. Formulir Pelaporan Deforestasi
+![Formulir Pelaporan](./assets/add.png)
 
-```bash
-# using npm
-npm run android
+### 4. Analisis Perubahan Deforestasi Hutan
+![Analisis Perubahan](./assets/analisis.png)
 
-# OR using Yarn
-yarn android
-```
+### 5. Profil
+![Profil](./assets/profil.png)
 
-### For iOS
+### 5. Login
+![Login Page](./assets/login.png)
 
-```bash
-# using npm
-npm run ios
+## Cara Mengakses Repository
+1. Clone repository ini:
+   ```bash
+   git clone https://github.com/username/tectosense.git
+   ```
+2. Instal dependensi yang diperlukan:
+   ```bash
+   npm install
+   ```
+3. Jalankan aplikasi di perangkat mobile:
+   ```bash
+   npx react-native run-android
+   ```
 
-# OR using Yarn
-yarn ios
-```
+Dengan TectoSense, kami berharap dapat membantu upaya pelestarian lingkungan dan mengurangi tingkat deforestasi di Kabupaten Blora. Jika ada pertanyaan atau saran, jangan ragu untuk membuka *issue* pada repository ini.
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
-
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
