@@ -17,7 +17,7 @@ TectoSense dikembangkan dengan memanfaatkan berbagai teknologi modern, yaitu:
 5. **GeoServer**: Untuk pengelolaan dan penyajian data spasial.  
 
 ## Sumber Data
-Aplikasi ini menggunakan citra satelit Landsat 8 dari berbagai tahun untuk mendeteksi perubahan tutupan lahan:
+Aplikasi ini menggunakan citra satelit Landsat 7 dari berbagai tahun untuk mendeteksi perubahan tutupan lahan:
 - Tahun 2013  
 - Tahun 2016  
 - Tahun 2019  
