@@ -124,8 +124,18 @@ const Listdata = () => {
               onChangeText={setEmail}
             />
             <View style={styles.actionButtons}>
-              <Button title="Update" onPress={updateData} />
-              <Button title="Batal" color="red" onPress={resetForm} />
+              <TouchableOpacity
+                style={[styles.button, { backgroundColor: '#80E27E' }]} // Pastel Green
+                onPress={updateData}
+              >
+                <Text style={styles.buttonText}>Update</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={[styles.button, { backgroundColor: '#FFB74D' }]} // Pastel Orange
+                onPress={resetForm}
+              >
+                <Text style={styles.buttonText}>Batal</Text>
+              </TouchableOpacity>
             </View>
           </ScrollView>
         </View>
@@ -198,6 +208,17 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginTop: 15,
+  },
+  button: {
+    paddingVertical: 12,
+    borderRadius: 8,
+    width: '48%',
+    alignItems: 'center',
+  },
+  buttonText: {
+    color: '#FFF',
+    fontSize: 16,
+    fontWeight: 'bold',
   },
   card: {
     flexDirection: 'row',
