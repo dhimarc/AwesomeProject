@@ -40,22 +40,22 @@ Titik-titik laporan akan divisualisasikan di peta interaktif menggunakan Leaflet
 Berikut beberapa tangkapan layar penting dari aplikasi TectoSense:  
 
 ### 1. Halaman Utama  
-<img src="./assets/homepage.png" alt="Halaman Utama" width="600"/>  
+<img src="./assets/homepage.png" alt="Halaman Utama" width="200"/>  
 
 ### 2. Peta dengan Titik Laporan  
-<img src="./assets/plot.png" alt="Peta Titik Laporan" width="600"/>  
+<img src="./assets/plot.png" alt="Peta Titik Laporan" width="200"/>  
 
 ### 3. Formulir Pelaporan  
-<img src="./assets/add.png" alt="Formulir Pelaporan" width="600"/>  
+<img src="./assets/add.png" alt="Formulir Pelaporan" width="200"/>  
 
 ### 4. Analisis Perubahan Tutupan Lahan  
-<img src="./assets/analisis.png" alt="Analisis Perubahan Tutupan Lahan" width="600"/>  
+<img src="./assets/analisis.png" alt="Analisis Perubahan Tutupan Lahan" width="200"/>  
 
 ### 5. Profil Pengguna  
-<img src="./assets/profil.png" alt="Profil Pengguna" width="600"/>  
+<img src="./assets/profil.png" alt="Profil Pengguna" width="200"/>  
 
 ### 6. Halaman Login  
-<img src="./assets/login.png" alt="Halaman Login" width="600"/>  
+<img src="./assets/login.png" alt="Halaman Login" width="200"/>  
 
 ## Cara Mengakses Repository
 Untuk menjalankan proyek ini secara lokal, ikuti langkah-langkah berikut:  
