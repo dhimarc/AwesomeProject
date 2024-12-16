@@ -1,73 +1,65 @@
 # TectoSense: Tectona Grandis Environmental Monitoring and Reporting System
 
 ## Deskripsi Produk
-TectoSense adalah sebuah aplikasi monitoring lingkungan yang dirancang untuk melakukan analisis deforestasi di Kabupaten Blora. Aplikasi ini memungkinkan pengguna untuk melaporkan berbagai faktor penyebab deforestasi, seperti:
-- Kebakaran hutan
-- Penebangan liar
-- Pohon roboh
+TectoSense adalah aplikasi monitoring lingkungan yang dirancang untuk menganalisis deforestasi di Kabupaten Blora. Aplikasi ini membantu melaporkan berbagai penyebab deforestasi, seperti:  
+- Kebakaran hutan  
+- Penebangan liar  
+- Pohon roboh  
 
-Selain itu, aplikasi ini menampilkan titik-titik laporan di peta, memberikan visualisasi yang informatif untuk memahami pola dan penyebab deforestasi.
+Selain itu, aplikasi ini menampilkan titik-titik laporan di peta interaktif, mempermudah pengguna untuk memahami pola deforestasi di area tertentu.
 
 ## Komponen Pembangun Produk
-TectoSense dibangun menggunakan teknologi modern berikut:
-- **React Native**: Untuk pengembangan aplikasi mobile.
-- **Leaflet.js**: Untuk menampilkan peta interaktif.
-- **Thunder Client**: Untuk pengujian API.
-- **GitHub Pages**: Menyediakan platform hosting untuk menampilkan shapefile terkait.
-- **GeoServer**: Untuk menyimpan dan mengelola data spasial.
+TectoSense dikembangkan dengan memanfaatkan berbagai teknologi modern, yaitu:  
+1. **React Native**: Untuk membangun aplikasi mobile.  
+2. **Leaflet.js**: Untuk menampilkan peta interaktif.  
+3. **Thunder Client**: Sebagai alat untuk menguji API.  
+4. **GitHub Pages**: Menyediakan hosting untuk file shapefile.  
+5. **GeoServer**: Untuk pengelolaan dan penyajian data spasial.  
 
 ## Sumber Data
-Aplikasi ini menggunakan data dari citra satelit Landsat 8 untuk tahun berikut:
-- 2013
-- 2016
-- 2019
-- 2022
-- 2024
+Aplikasi ini menggunakan citra satelit Landsat 8 dari berbagai tahun untuk mendeteksi perubahan tutupan lahan:
+- Tahun 2013  
+- Tahun 2016  
+- Tahun 2019  
+- Tahun 2022  
+- Tahun 2024  
 
-Citra ini digunakan untuk menganalisis perubahan tutupan lahan dan mendeteksi aktivitas deforestasi secara berkala.
+Analisis dilakukan berdasarkan perubahan *Normalized Difference Fraction Index* (NDFI) untuk memantau aktivitas deforestasi secara berkala.
 
 ## Fitur Utama
-1. **Analisis Deforestasi**:
-   - Deteksi perubahan tutupan lahan berdasarkan NDFI.
-2. **Pelaporan Deforestasi**:
-   - Menyediakan platform untuk melaporkan kebakaran hutan, penebangan liar, atau pohon roboh.
-3. **Visualisasi Peta**:
-   - Menampilkan titik-titik laporan di peta interaktif menggunakan Leaflet.js.
+### 1. Analisis Deforestasi  
+Mendeteksi perubahan tutupan lahan berdasarkan analisis citra satelit Landsat 8.  
 
-## Tangkapan Layar Komponen Penting Produk
-Berikut adalah beberapa tangkapan layar dari aplikasi TectoSense:
+### 2. Pelaporan Deforestasi  
+Pengguna dapat melaporkan penyebab deforestasi, seperti kebakaran hutan, penebangan liar, atau pohon roboh melalui formulir interaktif.  
 
-### 1. Halaman Utama
-![Halaman Utama](./assets/homepage.png)
+### 3. Visualisasi Peta Interaktif  
+Titik-titik laporan akan divisualisasikan di peta interaktif menggunakan Leaflet.js, memungkinkan pemantauan lokasi spesifik.
 
-### 2. Peta dengan Titik Laporan
-![Peta Titik Laporan](./assets/plot.png)
+## Tangkapan Layar Komponen Produk
+Berikut beberapa tangkapan layar penting dari aplikasi TectoSense:  
 
-### 3. Formulir Pelaporan Deforestasi
-![Formulir Pelaporan](./assets/add.png)
+### 1. Halaman Utama  
+<img src="./assets/homepage.png" alt="Halaman Utama" width="600"/>  
 
-### 4. Analisis Perubahan Deforestasi Hutan
-![Analisis Perubahan](./assets/analisis.png)
+### 2. Peta dengan Titik Laporan  
+<img src="./assets/plot.png" alt="Peta Titik Laporan" width="600"/>  
 
-### 5. Profil
-![Profil](./assets/profil.png)
+### 3. Formulir Pelaporan  
+<img src="./assets/add.png" alt="Formulir Pelaporan" width="600"/>  
 
-### 5. Login
-![Login Page](./assets/login.png)
+### 4. Analisis Perubahan Tutupan Lahan  
+<img src="./assets/analisis.png" alt="Analisis Perubahan Tutupan Lahan" width="600"/>  
+
+### 5. Profil Pengguna  
+<img src="./assets/profil.png" alt="Profil Pengguna" width="600"/>  
+
+### 6. Halaman Login  
+<img src="./assets/login.png" alt="Halaman Login" width="600"/>  
 
 ## Cara Mengakses Repository
+Untuk menjalankan proyek ini secara lokal, ikuti langkah-langkah berikut:  
+
 1. Clone repository ini:
    ```bash
-   git clone https://github.com/username/tectosense.git
-   ```
-2. Instal dependensi yang diperlukan:
-   ```bash
-   npm install
-   ```
-3. Jalankan aplikasi di perangkat mobile:
-   ```bash
-   npx react-native run-android
-   ```
-
-Dengan TectoSense, kami berharap dapat membantu upaya pelestarian lingkungan dan mengurangi tingkat deforestasi di Kabupaten Blora. Jika ada pertanyaan atau saran, jangan ragu untuk membuka *issue* pada repository ini.
-
+   git clone https://github.com/dhimarc/AwesomeProject.git
